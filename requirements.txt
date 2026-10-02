@@ -1,0 +1,8 @@
+# scorer (score.py)
+matplotlib>=3.8,<4
+numpy>=1.26,<3
+pandas>=2.0,<4
+# training / inference (train.py)
+lightgbm>=4.3,<5
+# report (make_report.py)
+python-docx>=1.1,<2

@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+# assessment originals (score.py / requirements.txt / README.md supersede them)
+freight-rate-ml-assessment.pdf
+solve.py.txt
+README.md.txt
+requirements.txt.txt

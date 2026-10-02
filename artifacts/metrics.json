@@ -1,0 +1,160 @@
+{
+  "holdout": "fit 2025-01-01..2025-09-30, evaluate 2025-10-01..2025-10-31",
+  "n_fit_after_anomaly_filter": 42608,
+  "n_holdout": 4853,
+  "n_holdout_label_anomalies": 72,
+  "n_final_train_after_anomaly_filter": 47388,
+  "backtest_mean_by_model": {
+    "baseline": {
+      "MAE": 233.3,
+      "RMSE": 669.565,
+      "MAPE_%": 10.491,
+      "MedAPE_%": 6.957,
+      "RPM_RMSE": 0.581
+    },
+    "lgbm_no_market": {
+      "MAE": 98.801,
+      "RMSE": 624.566,
+      "MAPE_%": 4.461,
+      "MedAPE_%": 1.661,
+      "RPM_RMSE": 0.523
+    },
+    "lgbm_rel_market": {
+      "MAE": 117.122,
+      "RMSE": 626.087,
+      "MAPE_%": 5.186,
+      "MedAPE_%": 2.241,
+      "RPM_RMSE": 0.526
+    },
+    "lgbm_with_market": {
+      "MAE": 133.358,
+      "RMSE": 635.179,
+      "MAPE_%": 5.928,
+      "MedAPE_%": 3.142,
+      "RPM_RMSE": 0.534
+    }
+  },
+  "october_holdout_all_rows": {
+    "baseline": {
+      "MAE": 231.37173826962507,
+      "RMSE": 683.912983863886,
+      "MAPE_%": 10.928318479774513,
+      "MedAPE_%": 6.73350745845023,
+      "RPM_RMSE": 0.6207172488527295
+    },
+    "lgbm_with_market": {
+      "MAE": 128.42055478570995,
+      "RMSE": 655.6735625318494,
+      "MAPE_%": 5.922201102103427,
+      "MedAPE_%": 2.6110316118172743,
+      "RPM_RMSE": 0.5721955028842983
+    },
+    "lgbm_with_market+imputed_market": {
+      "MAE": 135.07735209403162,
+      "RMSE": 654.3964089609217,
+      "MAPE_%": 6.523642984116986,
+      "MedAPE_%": 3.230732282444773,
+      "RPM_RMSE": 0.5763148882744742
+    },
+    "lgbm_rel_market": {
+      "MAE": 101.5080840572217,
+      "RMSE": 644.33912382185,
+      "MAPE_%": 4.823673535158532,
+      "MedAPE_%": 1.4979020575040092,
+      "RPM_RMSE": 0.5622128831654238
+    },
+    "lgbm_no_market": {
+      "MAE": 102.26179655350356,
+      "RMSE": 647.5475809971425,
+      "MAPE_%": 4.8314901396360455,
+      "MedAPE_%": 1.5840578156226415,
+      "RPM_RMSE": 0.5642431147733229
+    }
+  },
+  "october_holdout_excluding_label_anomalies": {
+    "baseline": {
+      "MAE": 176.31862590242696,
+      "RMSE": 277.0535776876119,
+      "MAPE_%": 8.252037219009624,
+      "MedAPE_%": 6.578294701900969,
+      "RPM_RMSE": 0.2756135198326007
+    },
+    "lgbm_with_market": {
+      "MAE": 71.56037927956055,
+      "RMSE": 140.9422744508157,
+      "MAPE_%": 3.193645983112807,
+      "MedAPE_%": 2.570860695353302,
+      "RPM_RMSE": 0.1400651477284262
+    },
+    "lgbm_with_market+imputed_market": {
+      "MAE": 78.33611791259426,
+      "RMSE": 141.61986766428498,
+      "MAPE_%": 3.8028766211176235,
+      "MedAPE_%": 3.1682918765446906,
+      "RPM_RMSE": 0.15416037759904488
+    },
+    "lgbm_rel_market": {
+      "MAE": 44.35656568450013,
+      "RMSE": 115.59159992443551,
+      "MAPE_%": 1.9888506446738479,
+      "MedAPE_%": 1.469421107332311,
+      "RPM_RMSE": 0.11139900797181004
+    },
+    "lgbm_no_market": {
+      "MAE": 45.056185658540684,
+      "RMSE": 117.99245127243624,
+      "MAPE_%": 2.0316018621161582,
+      "MedAPE_%": 1.5567758458140557,
+      "RPM_RMSE": 0.11211965053611377
+    }
+  },
+  "best_iterations": {
+    "lgbm_with_market": 224,
+    "lgbm_rel_market": 1812,
+    "lgbm_no_market": 628
+  },
+  "selected_validation_model": "lgbm_no_market",
+  "selected_december_model": "lgbm_no_market",
+  "december_min": 816.95,
+  "december_max": 836.74,
+  "lex_fw_dryvan_history_rate_median": 807.89,
+  "lex_fw_dryvan_history_n": 21,
+  "feature_importance_gain": {
+    "lgbm_with_market": {
+      "log_distance": 1470350.0,
+      "distance": 412259.0,
+      "quote_signal": 230323.0,
+      "equipment_code": 138121.0,
+      "mi_x_logdist": 84993.0,
+      "weight": 77866.0,
+      "d_lon": 62334.0,
+      "pickup_lat": 28150.0,
+      "delivery_lat": 27278.0,
+      "pickup_lon": 23852.0
+    },
+    "lgbm_rel_market": {
+      "log_distance": 1502695.0,
+      "distance": 413033.0,
+      "qs_rel": 304623.0,
+      "mi_rel": 212173.0,
+      "qs_load_rel": 197955.0,
+      "equipment_code": 150175.0,
+      "weight": 132364.0,
+      "d_lon": 94431.0,
+      "circuity": 81326.0,
+      "pickup_lat": 57018.0
+    },
+    "lgbm_no_market": {
+      "log_distance": 1503365.0,
+      "distance": 317815.0,
+      "equipment_code": 134139.0,
+      "weight": 93322.0,
+      "d_lon": 65053.0,
+      "circuity": 48981.0,
+      "pickup_lat": 36170.0,
+      "delivery_lat": 35703.0,
+      "pickup_lon": 32017.0,
+      "delivery_lon": 29347.0
+    }
+  }
+}
